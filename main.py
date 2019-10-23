@@ -10,8 +10,7 @@ if __name__=="__main__":
     """
 
     template = xlsxWrapper("Template.xlsx")
-    print(template.main_sheet)
-    print(template.__doc__)
-    print(rf.__doc__)
+    fmea_cols=template.getCols(template.fmea,0)
+    print(fmea_cols)
 
 

@@ -10,7 +10,10 @@ class xlsxWrapper():
     def __init__(self, file):
         self.book=readFile(file)
         self.sheet_names=self.book.sheet_names()
-        self.main_sheet=self.getSheet(self.sheet_names[1])
+        self.components=self.getSheet('COMPONENTS')
+        self.fmea=self.getSheet('FMEA')
+
+
 
 
     def getSheet(self, sheet_name):
@@ -18,6 +21,10 @@ class xlsxWrapper():
             return self.book.sheet_by_name(sheet_name)
         except:
             print("could not read sheet")
+
+    def getCols(self, sheet, row):
+        "returns all columns for a given row as list"
+        return sheet[0]
 
 
 def readFile(file):
