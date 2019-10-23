@@ -1,9 +1,12 @@
-"""
-XLS Wrapper
-"""
+
 import pyexcel as pe
 
 class xlsxWrapper():
+    """
+    XLS Wrapper
+    Author: Rell
+    Date: Oct 22 2019
+    """
     def __init__(self, file):
         self.book=readFile(file)
         self.sheet_names=self.book.sheet_names()
